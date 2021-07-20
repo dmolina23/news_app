@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter News',
       // Solo oculta una etiqueta cuando ejecutamos la app en modo Debug
       debugShowCheckedModeBanner: false,
+      //Los temas están en helper/theme.dart
       theme: ligthThemeData(context),
       darkTheme: darkThemeData(context),
       home: HomePage(),

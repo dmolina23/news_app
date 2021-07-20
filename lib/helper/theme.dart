@@ -6,11 +6,3 @@ ThemeData ligthThemeData(BuildContext context) {
     scaffoldBackgroundColor: Colors.white,
   );
 }
-
-ThemeData darkThemeData(BuildContext context) {
-  return ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: Color(0xFF1D35),
-    appBarTheme: AppBarTheme(backgroundColor: Color(0xFF1D1D35)
-    )
-  );
-}

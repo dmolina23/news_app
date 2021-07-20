@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:webview_flutter/webview_flutter.dart';
 
 class ArticleView extends StatefulWidget {
@@ -22,17 +23,27 @@ class _ArticleViewState extends State<ArticleView> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Flutter"),
+              Text("Flutter", style: TextStyle(color: Colors.black),),
               Text(
                 "News",
                 style: TextStyle(color: Colors.blue),
               )
             ],
           ),
+          actions: <Widget>[
+            Opacity(
+              opacity: 0,
+              child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Icon(Icons.save)),
+            )
+          ],
           centerTitle: true,
           elevation: 0.0,
         ),
         body: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
           child: WebView(
             initialUrl: widget.blogUrl,
             onWebViewCreated: ((WebViewController webViewController) {

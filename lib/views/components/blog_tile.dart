@@ -20,7 +20,7 @@ class BlogTile extends StatelessWidget {
             context,
             MaterialPageRoute(
                 builder: (context) => ArticleView(
-                      imageUrl: url,
+                      blogUrl: url,
                     )));
       },
       child: Container(
@@ -32,16 +32,10 @@ class BlogTile extends StatelessWidget {
                 child: Image.network(imageUrl)),
             Text(
               title,
-              style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black87,
-                  fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             ),
             SizedBox(height: 8),
-            Text(
-              desc,
-              style: TextStyle(color: Colors.black54),
-            )
+            Text(desc)
           ],
         ),
       ),

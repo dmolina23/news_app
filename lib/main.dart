@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //Los temas están en helper/theme.dart
       theme: ligthThemeData(context),
-      darkTheme: darkThemeData(context),
       home: HomePage(),
     );
   }

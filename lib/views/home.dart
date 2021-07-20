@@ -94,7 +94,8 @@ AppBar buildAppBar() {
     title: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text("Flutter", style: TextStyle(color: Colors.black),),
+        Text("Last", style: TextStyle(color: Colors.black),),
+        SizedBox(width: 4),
         Text(
           "News",
           style: TextStyle(color: Colors.blue),

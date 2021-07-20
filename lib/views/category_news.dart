@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_news/helper/news.dart';
 import 'package:flutter_news/models/article_model.dart';
-import 'package:flutter_news/models/category_model.dart';
 import 'package:flutter_news/views/components/blog_tile.dart';
 
 class CategoryNews extends StatefulWidget {
@@ -39,9 +38,10 @@ class _CategoryNewsState extends State<CategoryNews> {
       appBar: AppBar(
         title:
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-          Text("Flutter", style: TextStyle(color: Colors.black)),
+          Text("About", style: TextStyle(color: Colors.black)),
+          SizedBox(width: 4),
           Text(
-            "News",
+            widget.category,
             style: TextStyle(color: Colors.blue),
           )
         ]),
@@ -68,7 +68,7 @@ class _CategoryNewsState extends State<CategoryNews> {
             children: <Widget>[
               ///blogs
               Container(
-                padding: EdgeInsets.only(top: 16),
+                padding: EdgeInsets.symmetric(horizontal: 6),
                 child: ListView.builder(
                     itemCount: articles.length,
                     shrinkWrap: true,

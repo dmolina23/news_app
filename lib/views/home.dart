@@ -77,6 +77,7 @@ class _HomePageState extends State<HomePage> {
                               imageUrl: articles[index].urlToImage,
                               title: articles[index].title,
                               desc: articles[index].description,
+                              url: articles[index].url,
                             );
                           }),
                     )

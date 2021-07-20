@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_news/helper/theme.dart';
 import 'package:flutter_news/views/home.dart';
 
 void main() {
@@ -10,10 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      title: 'Flutter News',
+      // Solo oculta una etiqueta cuando ejecutamos la app en modo Debug
+      debugShowCheckedModeBanner: false,
+      theme: ligthThemeData(context),
+      darkTheme: darkThemeData(context),
       home: HomePage(),
     );
   }
